@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const nextScreen = this.getAttribute('data-next');
             
-            // ボタンのクリックエフェクト（文字が見えるように調整）
+            // ボタンのクリックエフェクト（FUSARI商品に合わせて調整）
             this.style.transform = 'translateY(1px)';
-            this.style.background = 'linear-gradient(145deg, rgba(139, 0, 0, 0.3), rgba(255, 215, 0, 0.12), rgba(139, 0, 0, 0.3))';
+            this.style.background = 'linear-gradient(145deg, rgba(165, 42, 42, 0.3), rgba(205, 133, 63, 0.15), rgba(139, 0, 0, 0.3))';
             this.style.color = '#ffd700';
-            this.style.textShadow = '1px 1px 3px rgba(139, 0, 0, 1), 0 0 15px rgba(255, 215, 0, 0.5)';
+            this.style.textShadow = '1px 1px 4px rgba(165, 42, 42, 1), 0 0 15px rgba(205, 133, 63, 0.6)';
             
             setTimeout(() => {
                 this.style.transform = '';

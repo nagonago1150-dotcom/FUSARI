@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Crimson Text', 'Georgia', serif;
-    background: linear-gradient(135deg, #8b0000 0%, #cd853f 15%, #daa520 30%, #8b0000 45%, #b8860b 60%, #daa520 75%, #8b0000 100%);
-    color: #f5f5dc;
+    background: linear-gradient(135deg, #a52a2a 0%, #8b0000 25%, #cd853f 45%, #8b0000 65%, #a52a2a 100%);
+    color: #f8f8ff;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -20,30 +20,31 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #8b0000 0%, #daa520 50%, #8b0000 100%);
+    background: linear-gradient(90deg, #a52a2a 0%, #cd853f 50%, #a52a2a 100%);
     color: #ffd700;
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     font-size: 12px;
     font-weight: 600;
     z-index: 1000;
-    border-bottom: 2px solid #ffd700;
-    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+    border-bottom: 3px solid #cd853f;
+    box-shadow: 0 3px 15px rgba(205, 133, 63, 0.5);
+    letter-spacing: 1px;
 }
 
 /* メインコンテナ */
 .container {
     min-height: 100vh;
-    padding-top: 40px;
+    padding-top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 60%),
-        radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 70%),
-        linear-gradient(135deg, #8b0000 0%, #cd853f 15%, #daa520 30%, #8b0000 45%, #b8860b 60%, #daa520 75%, #8b0000 100%);
+        radial-gradient(circle at 20% 80%, rgba(205, 133, 63, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(165, 42, 42, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 70%),
+        linear-gradient(135deg, #a52a2a 0%, #8b0000 25%, #cd853f 45%, #8b0000 65%, #a52a2a 100%);
 }
 
 /* 画面共通スタイル */
@@ -76,39 +77,38 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 900;
-    background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
+    background: linear-gradient(135deg, #cd853f 0%, #ffd700 50%, #daa520 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 20px;
-    text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    text-shadow: 0 0 30px rgba(205, 133, 63, 0.5);
     letter-spacing: 3px;
-    filter: drop-shadow(2px 2px 4px rgba(139, 0, 0, 0.3));
+    filter: drop-shadow(3px 3px 6px rgba(165, 42, 42, 0.4));
 }
 
 .sub-catch {
     font-family: 'Crimson Text', serif;
     font-size: 1.3rem;
-    color: #daa520;
-    font-weight: 400;
+    color: #cd853f;
+    font-weight: 500;
     font-style: italic;
     letter-spacing: 1.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(165, 42, 42, 0.7);
 }
 
 /* 質問セクション */
 .question-section {
-    background: linear-gradient(145deg, rgba(139, 0, 0, 0.3), rgba(218, 165, 32, 0.1), rgba(139, 0, 0, 0.3));
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    border-image: linear-gradient(135deg, #ffd700, #8b0000, #ffd700) 1;
+    background: linear-gradient(145deg, rgba(165, 42, 42, 0.25), rgba(205, 133, 63, 0.08), rgba(139, 0, 0, 0.25));
+    border: 2px solid rgba(205, 133, 63, 0.4);
     border-radius: 20px;
     padding: 50px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     box-shadow: 
-        0 20px 40px rgba(139, 0, 0, 0.3),
-        0 0 20px rgba(255, 215, 0, 0.2),
-        inset 0 1px 0 rgba(255, 215, 0, 0.3);
+        0 25px 50px rgba(165, 42, 42, 0.3),
+        0 0 25px rgba(205, 133, 63, 0.2),
+        inset 0 1px 0 rgba(205, 133, 63, 0.3),
+        inset 0 0 20px rgba(248, 248, 255, 0.05);
 }
 
 .question-section.centered {
@@ -123,22 +123,22 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.9rem;
     font-weight: 700;
-    color: #f5f5dc;
+    color: #f8f8ff;
     margin-bottom: 15px;
     line-height: 1.4;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.6);
+    text-shadow: 2px 2px 6px rgba(165, 42, 42, 0.7);
 }
 
 .question-note {
     font-family: 'Crimson Text', serif;
     font-size: 1rem;
-    color: #daa520;
+    color: #cd853f;
     margin-bottom: 40px;
     font-style: italic;
     font-weight: 600;
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px rgba(165, 42, 42, 0.8);
 }
 
 /* オプションボタン */
@@ -152,11 +152,11 @@ body {
 
 .option-btn {
     font-family: 'Crimson Text', serif;
-    background: linear-gradient(145deg, rgba(139, 0, 0, 0.2), rgba(255, 215, 0, 0.05), rgba(139, 0, 0, 0.2));
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    background: linear-gradient(145deg, rgba(165, 42, 42, 0.15), rgba(205, 133, 63, 0.05), rgba(139, 0, 0, 0.15));
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(205, 133, 63, 0.4);
     border-radius: 50px;
-    color: #f5f5dc;
+    color: #f8f8ff;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 22px 35px;
@@ -165,22 +165,23 @@ body {
     position: relative;
     overflow: hidden;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(139, 0, 0, 0.8);
+    text-shadow: 1px 1px 4px rgba(165, 42, 42, 0.9);
     box-shadow: 
-        0 8px 25px rgba(139, 0, 0, 0.2),
-        0 0 20px rgba(255, 215, 0, 0.1),
-        inset 0 1px 0 rgba(255, 215, 0, 0.2);
+        0 10px 30px rgba(165, 42, 42, 0.2),
+        0 0 25px rgba(205, 133, 63, 0.1),
+        inset 0 1px 0 rgba(205, 133, 63, 0.2),
+        inset 0 0 15px rgba(248, 248, 255, 0.03);
 }
 
 .option-btn::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 0, 0, 0.1), rgba(255, 215, 0, 0.1));
+    background: linear-gradient(135deg, rgba(205, 133, 63, 0.1), rgba(165, 42, 42, 0.1), rgba(205, 133, 63, 0.1));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 0.4s ease;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .option-btn::after {
@@ -190,7 +191,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(205, 133, 63, 0.2), transparent);
     transition: left 0.6s;
 }
 
@@ -203,24 +204,26 @@ body {
 }
 
 .option-btn:hover {
-    background: linear-gradient(145deg, rgba(139, 0, 0, 0.3), rgba(255, 215, 0, 0.1), rgba(139, 0, 0, 0.3));
-    border-color: rgba(255, 215, 0, 0.6);
+    background: linear-gradient(145deg, rgba(165, 42, 42, 0.25), rgba(205, 133, 63, 0.12), rgba(139, 0, 0, 0.25));
+    border-color: rgba(205, 133, 63, 0.7);
     transform: translateY(-3px);
     box-shadow: 
-        0 15px 35px rgba(139, 0, 0, 0.3),
-        0 5px 25px rgba(255, 215, 0, 0.2),
-        inset 0 1px 0 rgba(255, 215, 0, 0.4);
+        0 18px 40px rgba(165, 42, 42, 0.3),
+        0 8px 30px rgba(205, 133, 63, 0.2),
+        inset 0 1px 0 rgba(205, 133, 63, 0.5),
+        inset 0 0 20px rgba(248, 248, 255, 0.08);
     color: #ffd700;
-    text-shadow: 1px 1px 3px rgba(139, 0, 0, 1), 0 0 10px rgba(255, 215, 0, 0.3);
+    text-shadow: 1px 1px 4px rgba(165, 42, 42, 1), 0 0 12px rgba(205, 133, 63, 0.4);
 }
 
 .option-btn:active {
     transform: translateY(-1px);
-    background: linear-gradient(145deg, rgba(139, 0, 0, 0.25), rgba(255, 215, 0, 0.08), rgba(139, 0, 0, 0.25));
+    background: linear-gradient(145deg, rgba(165, 42, 42, 0.2), rgba(205, 133, 63, 0.08), rgba(139, 0, 0, 0.2));
     box-shadow: 
-        0 8px 20px rgba(139, 0, 0, 0.2),
-        0 2px 15px rgba(255, 215, 0, 0.15),
-        inset 0 1px 0 rgba(255, 215, 0, 0.3);
+        0 10px 25px rgba(165, 42, 42, 0.2),
+        0 3px 18px rgba(205, 133, 63, 0.15),
+        inset 0 1px 0 rgba(205, 133, 63, 0.4),
+        inset 0 0 15px rgba(248, 248, 255, 0.05);
 }
 
 /* ローディング画面 */
