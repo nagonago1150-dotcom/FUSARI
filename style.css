@@ -235,15 +235,14 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    border: 2px solid rgba(205, 133, 63, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 50px;
     backdrop-filter: blur(20px);
     box-shadow: 
-        0 20px 50px rgba(165, 42, 42, 0.18),
-        0 10px 30px rgba(205, 133, 63, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    animation: sectionBreathe 8s ease-in-out infinite alternate;
+        0 20px 50px rgba(0, 0, 0, 0.1),
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
     position: relative;
     overflow: hidden;
 }
@@ -270,20 +269,6 @@ body {
     z-index: 2;
 }
 
-@keyframes sectionBreathe {
-    0% { 
-        box-shadow: 
-            0 20px 40px rgba(165, 42, 42, 0.15),
-            0 10px 25px rgba(205, 133, 63, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    }
-    100% { 
-        box-shadow: 
-            0 25px 50px rgba(165, 42, 42, 0.2),
-            0 15px 35px rgba(205, 133, 63, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    }
-}
 
 .question-section.centered {
     display: flex;
