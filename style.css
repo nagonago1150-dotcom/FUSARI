@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,9 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    color: #ffffff;
+    font-family: 'Crimson Text', 'Georgia', serif;
+    background: linear-gradient(135deg, #1a0000 0%, #2d1a0a 25%, #0d0d0d 50%, #2d0a0a 75%, #1a0000 100%);
+    color: #f5f5dc;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -18,13 +20,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: #000000;
-    color: #cccccc;
+    background: linear-gradient(90deg, #1a0000 0%, #0d0d0d 50%, #1a0000 100%);
+    color: #d4af37;
     text-align: center;
     padding: 8px;
     font-size: 12px;
+    font-weight: 600;
     z-index: 1000;
-    border-bottom: 1px solid #333;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
 }
 
 /* メインコンテナ */
@@ -36,9 +40,10 @@ body {
     justify-content: center;
     position: relative;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
-        linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.1) 0%, transparent 70%),
+        linear-gradient(135deg, #1a0000 0%, #2d1a0a 25%, #0d0d0d 50%, #2d0a0a 75%, #1a0000 100%);
 }
 
 /* 画面共通スタイル */
@@ -68,34 +73,42 @@ body {
 }
 
 .main-catch {
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 900;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 20px;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-    letter-spacing: 2px;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    letter-spacing: 3px;
+    filter: drop-shadow(2px 2px 4px rgba(139, 0, 0, 0.3));
 }
 
 .sub-catch {
-    font-size: 1.2rem;
-    color: #cccccc;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    color: #daa520;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* 質問セクション */
 .question-section {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    background: linear-gradient(145deg, rgba(26, 0, 0, 0.4), rgba(13, 13, 13, 0.6), rgba(45, 10, 10, 0.4));
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(135deg, #d4af37, #8b0000, #d4af37) 1;
     border-radius: 20px;
     padding: 50px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 20px 40px rgba(139, 0, 0, 0.4),
+        0 0 20px rgba(212, 175, 55, 0.1),
+        inset 0 1px 0 rgba(212, 175, 55, 0.2);
 }
 
 .question-section.centered {
@@ -107,44 +120,55 @@ body {
 }
 
 .question-title {
-    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #f5f5dc;
     margin-bottom: 15px;
     line-height: 1.4;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.6);
 }
 
 .question-note {
-    font-size: 0.9rem;
-    color: #999999;
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    color: #daa520;
     margin-bottom: 40px;
     font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* オプションボタン */
 .options {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     max-width: 500px;
     margin: 0 auto;
 }
 
 .option-btn {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(145deg, rgba(26, 0, 0, 0.8), rgba(13, 13, 13, 0.9), rgba(45, 10, 10, 0.8));
     border: 2px solid transparent;
     background-clip: padding-box;
     border-radius: 50px;
-    color: #ffffff;
-    font-size: 1.1rem;
+    color: #f5f5dc;
+    font-size: 1.2rem;
     font-weight: 600;
-    padding: 20px 30px;
+    padding: 22px 35px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 
+        0 8px 20px rgba(139, 0, 0, 0.3),
+        inset 0 1px 0 rgba(212, 175, 55, 0.2);
 }
 
 .option-btn::before {
@@ -152,27 +176,48 @@ body {
     position: absolute;
     inset: 0;
     padding: 2px;
-    background: linear-gradient(135deg, #ffd700, #8b0000, #ffd700);
+    background: linear-gradient(135deg, #d4af37, #8b0000, #b8860b, #d4af37);
     border-radius: inherit;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: xor;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+}
+
+.option-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    transition: left 0.6s;
 }
 
 .option-btn:hover::before {
     opacity: 1;
 }
 
+.option-btn:hover::after {
+    left: 100%;
+}
+
 .option-btn:hover {
-    background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+    background: linear-gradient(145deg, rgba(45, 10, 10, 0.9), rgba(26, 0, 0, 0.9), rgba(45, 26, 10, 0.9));
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 35px rgba(139, 0, 0, 0.4),
+        0 5px 15px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(212, 175, 55, 0.3);
+    color: #daa520;
 }
 
 .option-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 
+        0 8px 20px rgba(139, 0, 0, 0.3),
+        0 2px 8px rgba(212, 175, 55, 0.1);
 }
 
 /* ローディング画面 */
@@ -190,12 +235,14 @@ body {
 }
 
 .loader {
-    width: 80px;
-    height: 80px;
-    border: 4px solid rgba(255, 215, 0, 0.1);
-    border-left-color: #ffd700;
+    width: 90px;
+    height: 90px;
+    border: 4px solid rgba(212, 175, 55, 0.1);
+    border-left-color: #d4af37;
+    border-top-color: #8b0000;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 @keyframes spin {
@@ -204,28 +251,32 @@ body {
 }
 
 .loading-text {
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #f5f5dc;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.5);
+    letter-spacing: 1px;
 }
 
 .loading-dots {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
 }
 
 .loading-dots span {
-    width: 12px;
-    height: 12px;
-    background: #ffd700;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #d4af37, #8b0000);
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out both;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
 }
 
 .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
