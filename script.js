@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lightElement.style.cssText = `
             position: absolute;
-            width: 3px;
-            height: 3px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.9) 0%, rgba(139, 0, 0, 0.3) 50%, transparent 70%);
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(205, 133, 63, 0.8) 0%, rgba(165, 42, 42, 0.4) 50%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: -1;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 15px rgba(205, 133, 63, 0.5);
         `;
         
         // ランダムな位置と移動方向を設定
