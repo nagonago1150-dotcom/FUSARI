@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // フェードインアニメーションをリセット
             setTimeout(() => {
                 targetScreenElement.classList.remove('fade-in');
-            }, 800);
+            }, 350);
             
-        }, 400);
+        }, 200);
     }
     
     // ローディング画面の処理と自動リダイレクト
@@ -51,28 +51,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
     
+    // リップル効果を作成する関数
+    function createRippleEffect(event, element) {
+        const ripple = document.createElement('div');
+        const rect = element.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            animation: ripple 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        `;
+        
+        element.style.position = 'relative';
+        element.style.overflow = 'hidden';
+        element.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 400);
+    }
+
     // オプションボタンのクリックイベントを設定
     optionButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(event) {
             const nextScreen = this.getAttribute('data-next');
             
-            // ボタンのクリックエフェクト（FUSARI商品に合わせて調整）
-            this.style.transform = 'translateY(1px)';
-            this.style.background = 'linear-gradient(145deg, rgba(165, 42, 42, 0.3), rgba(205, 133, 63, 0.15), rgba(139, 0, 0, 0.3))';
+            // ボタンのクリックエフェクト（高速レスポンス版）
+            this.style.transform = 'scale(0.98) translateY(1px)';
+            this.style.transition = 'all 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            this.style.background = 'linear-gradient(145deg, rgba(165, 42, 42, 0.4), rgba(205, 133, 63, 0.2), rgba(139, 0, 0, 0.4))';
             this.style.color = '#ffd700';
-            this.style.textShadow = '1px 1px 4px rgba(165, 42, 42, 1), 0 0 15px rgba(205, 133, 63, 0.6)';
+            this.style.textShadow = '1px 1px 4px rgba(165, 42, 42, 1), 0 0 20px rgba(205, 133, 63, 0.8)';
+            this.style.boxShadow = 'inset 0 2px 8px rgba(139, 0, 0, 0.3), 0 4px 16px rgba(205, 133, 63, 0.4)';
+            
+            // リップル効果を追加
+            createRippleEffect(event, this);
             
             setTimeout(() => {
                 this.style.transform = '';
+                this.style.transition = '';
                 this.style.background = '';
                 this.style.color = '';
                 this.style.textShadow = '';
-            }, 200);
+                this.style.boxShadow = '';
+            }, 100);
             
-            // 少し遅延してから画面遷移を開始
+            // 高速画面遷移開始
             setTimeout(() => {
                 transitionToScreen(nextScreen);
-            }, 200);
+            }, 50);
         });
         
         // ボタンのホバーエフェクトを強化
@@ -155,6 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 定期的に光のエフェクトを生成
-    setInterval(createLightEffect, 2000);
+    // より頻繁で軽量な光のエフェクトを生成
+    setInterval(createLightEffect, 1200);
 });
