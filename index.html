@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUSARI - 革新的ヘアケア診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 広告表示 -->
+    <div class="pr-banner">
+        PR | エポラ株式会社
+    </div>
+
+    <!-- メインコンテナ -->
+    <div class="container">
+        <!-- 画面1: ファーストビュー / 質問1 -->
+        <div class="screen" id="screen1">
+            <div class="hero-section">
+                <h1 class="main-catch">
+                    そのヘアケア、大丈夫？
+                </h1>
+                <p class="sub-catch">
+                    もっと自信が持てる、ヘアスタイルへ。
+                </p>
+            </div>
+            
+            <div class="question-section">
+                <h2 class="question-title">Q1. 今のヘアケアに、正直"物足りなさ"を感じていませんか？</h2>
+                <div class="options">
+                    <button class="option-btn" data-next="screen2">はい、限界を感じている</button>
+                    <button class="option-btn" data-next="screen2">いいえ、満足している</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 画面2: 質問2 -->
+        <div class="screen" id="screen2" style="display: none;">
+            <div class="question-section centered">
+                <h2 class="question-title">Q2. もし、美容成分を頭皮※に直接"刺して"届ける、全く新しい方法があるとしたら…？</h2>
+                <p class="question-note">※角質層まで</p>
+                <div class="options">
+                    <button class="option-btn" data-next="screen3">どんなものか詳しく知りたい</button>
+                    <button class="option-btn" data-next="screen3">あまり興味がない</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 画面3: 質問3 -->
+        <div class="screen" id="screen3" style="display: none;">
+            <div class="question-section centered">
+                <h2 class="question-title">Q3. 楽天ランキング1位を獲得した"刺す"ヘアケアが【71%OFF】で試せるなら、使ってみたいですか？</h2>
+                <div class="options">
+                    <button class="option-btn" data-next="loading">はい、ぜひ試してみたい！</button>
+                    <button class="option-btn" data-next="loading">まずは詳細を確認したい</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 画面4: ローディング画面 -->
+        <div class="screen" id="loading" style="display: none;">
+            <div class="loading-section">
+                <div class="loading-animation">
+                    <div class="loader"></div>
+                </div>
+                <h2 class="loading-text">あなただけの特別価格を準備中です…</h2>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
