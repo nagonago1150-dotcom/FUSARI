@@ -284,10 +284,12 @@ body {
     font-weight: 700;
     color: #2c2c2c;
     margin-bottom: 20px;
-    line-height: 1.3;
+    line-height: 1.4;
     letter-spacing: 0.5px;
     text-shadow: 1px 1px 3px rgba(165, 42, 42, 0.2);
     animation: questionSlideIn 1s ease-out 0.3s both;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 @keyframes questionSlideIn {
@@ -497,6 +499,17 @@ body {
     }
 }
 
+/* モバイル改行制御 */
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .mobile-break {
+        display: inline;
+    }
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .main-catch {
@@ -515,6 +528,9 @@ body {
     
     .question-title {
         font-size: 1.4rem;
+        line-height: 1.5;
+        word-break: keep-all;
+        overflow-wrap: break-word;
     }
     
     .screen {
@@ -529,6 +545,9 @@ body {
     .option-btn {
         font-size: 1rem;
         padding: 18px 25px;
+        white-space: normal;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 }
 
@@ -550,6 +569,10 @@ body {
     
     .question-title {
         font-size: 1.2rem;
+        line-height: 1.6;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        padding: 0 5px;
     }
     
     .loading-text {
