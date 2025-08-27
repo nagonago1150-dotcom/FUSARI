@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 画像の事前読み込み最適化
+    const preloadImages = [
+        'fusari-hero-optimized.jpg',
+        'background-image.jpg'
+    ];
+    
+    preloadImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = src;
+        document.head.appendChild(link);
+    });
+    
     const screens = document.querySelectorAll('.screen');
     const optionButtons = document.querySelectorAll('.option-btn');
     
